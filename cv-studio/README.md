@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open the localhost address printed in the terminal (normally http://127.0.0.1:5173). Keep that terminal running. Alternatively use pnpm; a pnpm lockfile is included for reproducible installation (`pnpm install --frozen-lockfile`).
+Open the localhost address printed in the terminal (normally http://127.0.0.1:5173). Keep that terminal running. Use `npm ci` for reproducible installation from the committed npm lockfile.
 
 ```sh
 npm run build
@@ -45,7 +45,10 @@ npm run preview
 - `src/App.tsx`: state, debounced persistence, import/export and replacement flow.
 - `src/styles.css`: responsive studio, designed/ATS layouts, print rules.
 
-For future Tauri packaging, retain Vite's static build, implement a filesystem-backed `CVRepository`, and replace browser download/print boundaries with native save dialogs/PDF support as needed. This MVP contains no Tauri scaffolding or native binaries. localStorage is synchronous and not encrypted; use an OS-backed storage adapter if native storage security is required. Schema changes should add explicit migrations before changing `schemaVersion`.
+A Tauri 2 shell now lives in `src-tauri/` and uses this same frontend. See
+[DESKTOP.md](DESKTOP.md) for setup, branch workflow, and remaining native integration.
+The shell is preliminary; browser export/print behavior still requires native validation.
+Schema changes should add explicit migrations before changing `schemaVersion`.
 
 ## Validation
 
