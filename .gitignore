@@ -1,0 +1,18 @@
+# Only application sources and repository controls belong in Git.
+/*
+!/.gitignore
+!/README.md
+!/.githooks/
+!/scripts/
+!/cv-studio/
+# Personal documents, backups and generated output
+.private/
+*.cv.json
+*.zip
+.env
+.env.*
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+cv-studio/public/*
