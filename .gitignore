@@ -1,10 +1,19 @@
-# Only application sources and repository controls belong in Git.
+# Track only application sources and repository controls at the root.
 /*
 !/.gitignore
 !/README.md
+!/DESKTOP.md
+!/VALIDATION.md
 !/.githooks/
 !/scripts/
-!/cv-studio/
+!/src/
+!/src-tauri/
+!/public/
+!/index.html
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/vite.config.ts
 # Personal documents, backups and generated output
 .private/
 *.cv.json
@@ -15,4 +24,4 @@ node_modules/
 dist/
 *.tsbuildinfo
 .DS_Store
-cv-studio/public/*
+/public/*

@@ -19,7 +19,7 @@ Install [Tauri's platform prerequisites](https://v2.tauri.app/start/prerequisite
 including Rust 1.90+ and Cargo. Linux additionally needs WebKitGTK 4.1 development
 packages and the other listed build dependencies. Build each target on its native OS.
 
-From `cv-studio/`:
+From the repository root:
 
 ```sh
 npm ci
