@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "CV Studio",
+  "productName": "Chambea Studio",
   "version": "0.1.0",
-  "identifier": "local.cvstudio.app",
+  "identifier": "local.chambea.studio",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://127.0.0.1:5173",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "CV Studio",
+        "title": "Chambea Studio",
         "width": 1440,
         "height": 960,
         "resizable": true,

@@ -7,3 +7,16 @@
 .cert-grid{display:grid;grid-template-columns:1fr;column-gap:26px}
 .resume:not(.ats) .cert-grid{grid-template-columns:1fr 1fr}
 .cert-grid .resume-entry{margin-bottom:11px}.message{background:#e8f0eb;border:1px solid #b9d0c2;border-radius:6px;padding:12px;font-size:12px;line-height:1.6;margin-bottom:16px}.message button{float:right;padding:0 5px}.message.error{background:#fff3ec;border-color:#efcdb8;color:#8a4d34}.dialog-backdrop{position:fixed;inset:0;z-index:10;background:#102c3a66;display:grid;place-items:center;padding:24px}.dialog{background:#fff;padding:30px;max-width:500px;border-radius:12px;box-shadow:0 20px 100px #0003}.dialog h2{margin-top:0}.dialog p{line-height:1.8;color:#61717c}.dialog>div{display:flex;justify-content:flex-end;gap:8px;margin-top:25px}.dialog button{font-size:12px}@media(min-width:1600px){.preview-panel{padding-left:65px;padding-right:65px}}@media(max-width:1200px){.workspace{grid-template-columns:170px minmax(300px,380px) minmax(440px,1fr)}.sidebar{padding-left:10px;padding-right:10px}.preview-panel{padding:28px 20px}.resume{padding:40px 32px}.header-actions{flex-wrap:wrap;justify-content:flex-end}.save-status{margin-right:0}}@media(max-width:1000px){.workspace{grid-template-columns:170px minmax(0,1fr)}.preview-panel{grid-column:2}.editor-panel{border-right:0}.sidebar{grid-row:1/3}.resume{max-width:794px;min-height:1000px}.app-header{padding:16px 20px}.save-status{width:100%;text-align:right}}@media(max-width:600px){.app-header{align-items:flex-start;flex-direction:column}.header-actions{justify-content:flex-start;gap:6px}.save-status{width:auto;order:4;margin-top:6px}.workspace{display:block}.sidebar{padding:16px;border-right:0;border-bottom:1px solid var(--border)}.sidebar>.eyebrow,.local-note{display:none}.sidebar nav{display:flex;overflow-x:auto}.sidebar nav button{font-size:11px;padding:10px}.nav-number,.nav-arrow{display:none}.new-document{margin:10px 0 0}.editor-panel{padding:23px 18px}.preview-panel{padding:24px 12px}.resume{padding:30px 22px;font-size:11px;min-height:800px}.resume h1{font-size:26px}.resume-header{gap:12px}.contact{font-size:9px}.entry-heading{gap:7px}.dialog>div{flex-wrap:wrap}}@page{size:A4;margin:16mm}@media print{html,body,#root{background:white!important;margin:0!important;padding:0!important}.app-header,.sidebar,.editor-panel,.preview-toolbar,.preview-caption,.print-hint,.dialog-backdrop{display:none!important}.workspace,.preview-panel,.paper-wrap{display:block!important;margin:0!important;padding:0!important;max-width:none!important;border:0!important}.resume{width:auto;min-height:0;box-shadow:none;padding:0;font-size:11pt}.resume-header{margin-bottom:8mm}.resume section{margin-top:8mm}.resume h2{break-after:avoid}.resume-entry{break-inside:avoid}.resume li{font-size:10pt}.resume h1{font-size:25pt}.summary{font-size:10pt}.resume a{color:inherit}.resume *{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* Keep the document in view while editing long sections side by side. */
+@media screen and (min-width:1001px){
+ html,body{height:100%;overflow:hidden}
+ #root{height:100vh;height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr)}
+ .workspace{min-height:0;overflow:hidden}
+ .sidebar,.editor-panel,.preview-panel{
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior-y:contain;
+  scrollbar-gutter:stable;
+ }
+}

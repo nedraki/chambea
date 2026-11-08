@@ -23,7 +23,7 @@ export function parseCV(raw: string): CV {
  (v.projects!==undefined&&!list(v.projects,x=>strings(x,['id','name','url']) && list(x.achievements,a=>strings(a,['id','text']) && Array.isArray(a.technologyIds) && a.technologyIds.every(t=>typeof t==='string')))) ||
  (v.projectTools!==undefined&&!(Array.isArray(v.projectTools)&&v.projectTools.every(t=>typeof t==='string')&&new Set(v.projectTools).size===v.projectTools.length)) ||
  !list(v.certifications,x=>strings(x,['id','name','issuer','date','url'])) ||
- !list(v.presentations,x=>strings(x,['id','title','conference','date','location','url']))) throw new Error('This file is not a valid CV Studio v1 document. Your current draft has not been changed.');
+ !list(v.presentations,x=>strings(x,['id','title','conference','date','location','url']))) throw new Error('This file is not a valid Chambea Studio v1 document. Your current draft has not been changed.');
  const cv = v as unknown as CV;
  if(cv.projects===undefined) cv.projects=[];
  if(cv.projectTools===undefined) cv.projectTools=[];

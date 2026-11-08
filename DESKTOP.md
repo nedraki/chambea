@@ -6,10 +6,9 @@ The React editor, CV schema, demo, preview, styles, and tests stay in `src/`.
 Tauri 2 in `src-tauri/` wraps the same Vite output. There is no second UI copy.
 Web development remains `npm run dev`; production web output remains `npm run build`.
 
-`main` holds the committed web baseline. `desktop/tauri` is a temporary feature
-branch. Merge web changes from `main` into it while desktop work is underway.
-Once the shell is validated, merge it into `main`; use short-lived feature branches
-for subsequent work on either target. Do not maintain permanent divergent products.
+`main` contains the web app and the experimental desktop shell. The shell is not
+release-ready. Use short-lived feature branches for further desktop work, then
+merge tested changes into `main`. Do not maintain permanent divergent products.
 Frontend changes ship to the desktop app when it is rebuilt/released; an installed
 app does not automatically receive web changes. Automatic updates are future work.
 
@@ -32,7 +31,7 @@ Vite uses a fixed localhost port 5173; stop an existing web dev server first.
 The shell has no custom Rust commands or filesystem privileges. It currently uses
 webview localStorage, separate from the browser's draft. Import a JSON backup to
 transfer a CV; no automatic migration or synchronization exists.
-The app identifier `local.cvstudio.app` is provisional; choose a stable identifier
+The app identifier `local.chambea.studio` is provisional; choose a stable identifier
 before distribution because changing it can change the app's storage location.
 
 ## Next implementation milestones

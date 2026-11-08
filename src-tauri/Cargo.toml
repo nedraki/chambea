@@ -1,8 +1,8 @@
 [package]
-name = "cv-studio"
+name = "chambea-studio"
 version = "0.1.0"
 description = "Local-first CV editor"
-authors = ["CV Studio Contributors"]
+authors = ["Chambea Studio Contributors"]
 license = ""
 repository = ""
 edition = "2024"

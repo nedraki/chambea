@@ -20,8 +20,16 @@ test('legacy documents without a projects key import as empty and invalid projec
  const dupTool=structuredClone(sampleCV);dupTool.projectTools=['t1','t1'];assert.throws(()=>parseCV(JSON.stringify(dupTool)));
 });
 test('ATS text preserves reading order, explicit URLs and linked technologies',()=>{
- const cv=structuredClone(sampleCV);cv.experiences[0].achievements[0].text='Built a new platform.';
- const text=plainText(cv);assert.ok(text.indexOf(cv.contact.name)<text.indexOf('WORK EXPERIENCE'));assert.ok(text.includes('Portfolio: https://example.com'));assert.ok(text.includes('design review practices.\n[Rocket propulsion, Mechanical design, Technical drawing, Failure analysis]'));assert.ok(text.includes('CONFERENCE PRESENTATIONS'));
+ const cv=structuredClone(sampleCV) as import('./model').CV;
+ cv.education=[{id:'test-ed',degree:'Test degree',institution:'Test institution',start:'',end:'',details:''}];
+ cv.presentations=[{id:'test-talk',title:'Test talk',conference:'Test event',date:'',location:'',url:''}];
+ cv.experiences[0].achievements=[{id:'test-a',text:'Delivered a project.',technologyIds:['t1','t2']}];
+ const text=plainText(cv);
+ assert.ok(text.indexOf(cv.contact.name)<text.indexOf('WORK EXPERIENCE'));
+ assert.ok(text.includes('Artist profile: https://www.grammy.com/artists/bad-bunny/243129/'));
+ assert.ok(text.includes('Delivered a project.\n[Songwriting, Vocal performance]'));
+ assert.ok(text.includes('CONFERENCE PRESENTATIONS'));
  assert.ok(text.indexOf('FEATURED PROJECTS')<text.indexOf('WORK EXPERIENCE')&&text.indexOf('WORK EXPERIENCE')<text.indexOf('EDUCATION'));
- assert.ok(text.includes('Road Runner Detection System\nURL: https://example.com/road-runner-detector'));assert.ok(text.includes('Painted a convincing tunnel entrance; investigating why only the intended subject can pass through.\n[Rocket propulsion, Mechanical design, Technical drawing, Failure analysis]'));
+ assert.ok(text.includes('Un Verano Sin Ti (2022)\nURL: https://www.grammy.com/artists/bad-bunny/243129/'));
+ assert.ok(text.includes('[Songwriting, Vocal performance, Studio recording]'));
 });

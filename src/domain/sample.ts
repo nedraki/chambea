@@ -1,52 +1,53 @@
 import type { CV } from './model';
+// Unofficial editorial demo. Public sources are documented in README.md.
 export const sampleCV = {
   "schemaVersion": 1,
   "contact": {
-    "name": "Wile E. Coyote",
-    "email": "wile.e.coyote@example.com",
-    "phone": "",
-    "location": "Painted Desert, Arizona (fictional)",
-    "languages": "English, elaborate diagrams",
-    "additionalInfo": "Genius, self-certified\nFictional demonstration profile",
+    "name": "Benito Martinez",
+    "email": "bad.bunny@example.com",
+    "phone": "+1 202-555-0147",
+    "location": "Puerto Rico",
+    "languages": "Spanish, English",
+    "additionalInfo": "Recording Artist · Songwriter · Performer\nWebsite: https://example.com/bad-bunny\nUnofficial demonstration CV",
     "links": [
       {
         "id": "l1",
-        "label": "Portfolio",
-        "url": "https://example.com"
+        "label": "Artist profile",
+        "url": "https://www.grammy.com/artists/bad-bunny/243129/"
       }
     ]
   },
-  "summary": "Inventive desert engineer specializing in ambitious pursuit systems, rapid prototyping, and exceptionally persistent field testing. Turns every unexpected landing into a new design iteration. Fictional, unofficial demo inspired by Looney Tunes.",
+  "summary": "Puerto Rican recording artist bringing Spanish-language music to a global audience through reggaeton, Latin trap, and Caribbean sounds. Combines distinctive songwriting, ambitious album concepts, and large-scale live performance. Spotify’s most-streamed global artist in 2020, 2021, 2022, and 2025, with a body of work recognized by the Recording Academy.",
   "technologies": [
     {
       "id": "t1",
-      "name": "Rocket propulsion"
+      "name": "Songwriting"
     },
     {
       "id": "t2",
-      "name": "Mechanical design"
+      "name": "Vocal performance"
     },
     {
       "id": "t3",
-      "name": "Technical drawing"
+      "name": "Studio recording"
     },
     {
       "id": "t4",
-      "name": "Failure analysis"
+      "name": "Live performance"
     }
   ],
   "experiences": [
     {
       "id": "e1",
-      "role": "Lead Pursuit Engineer",
-      "company": "Independent Desert Research",
-      "location": "Painted Desert",
-      "start": "1949",
+      "role": "Recording Artist & Songwriter",
+      "company": "Bad Bunny",
+      "location": "Puerto Rico · International",
+      "start": "2016",
       "end": "Present",
       "achievements": [
         {
           "id": "a1",
-          "text": "Designed rocket-powered skates for rapid pursuit; identified braking as the next research priority.",
+          "text": "Reached 19.8 billion Spotify streams in 2025, earning the platform’s global top-artist position for a fourth year.",
           "technologyIds": [
             "t1",
             "t2"
@@ -54,9 +55,30 @@ export const sampleCV = {
         },
         {
           "id": "a2",
-          "text": "Documented every canyon-related setback with detailed failure analysis and design review practices.",
+          "text": "Became the first artist to lead Spotify’s annual global artist ranking for three consecutive years (2020–2022); surpassed 18.5 billion streams in 2022.",
+          "technologyIds": []
+        },
+        {
+          "id": "a4",
+          "text": "Developed a Spanish-language catalogue spanning reggaeton, Latin trap, and Puerto Rican musical traditions, with collaborations and screen work extending its reach.",
           "technologyIds": [
-            "t3",
+            "t3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "role": "Live Performer",
+      "company": "Selected international performances",
+      "location": "United States · International",
+      "start": "2023",
+      "end": "",
+      "achievements": [
+        {
+          "id": "a5",
+          "text": "Headlined Coachella in 2023, becoming the first Latino solo artist to headline the festival.",
+          "technologyIds": [
             "t4"
           ]
         }
@@ -64,84 +86,92 @@ export const sampleCV = {
     },
     {
       "id": "e2",
-      "role": "Field Product Tester",
-      "company": "ACME Equipment (fictional)",
-      "location": "Desert test range",
-      "start": "1948",
-      "end": "1949",
+      "role": "Actor",
+      "company": "Selected screen credits",
+      "location": "International",
+      "start": "2021",
+      "end": "2022",
       "achievements": [
         {
           "id": "a3",
-          "text": "Evaluated portable tunnels, giant magnets, and spring-loaded launchers under demanding field conditions.",
-          "technologyIds": [
-            "t2",
-            "t4"
-          ]
+          "text": "Expanded into screen acting with appearances in Narcos: Mexico (2021) and Bullet Train (2022).",
+          "technologyIds": []
         }
       ]
     }
   ],
   "projects": [
     {
+      "id": "pr3",
+      "name": "DeBÍ TiRAR MáS FOToS (2025)",
+      "url": "https://newsroom.spotify.com/2025-12-03/wrapped-bad-bunny-top-artist-album/",
+      "achievements": [
+        {
+          "id": "pa4",
+          "text": "Placed Puerto Rican identity and musical heritage at the center of an album blending contemporary urban music with Caribbean traditions.",
+          "technologyIds": [
+            "t1",
+            "t2",
+            "t3"
+          ]
+        },
+        {
+          "id": "pa5",
+          "text": "Ranked as Spotify’s most-streamed album globally in 2025.",
+          "technologyIds": []
+        }
+      ]
+    },
+    {
       "id": "pr1",
-      "name": "Road Runner Detection System",
-      "url": "https://example.com/road-runner-detector",
+      "name": "Un Verano Sin Ti (2022)",
+      "url": "https://www.grammy.com/artists/bad-bunny/243129/",
       "achievements": [
         {
           "id": "pa1",
-          "text": "Prototyped a birdseed-triggered alert system with a deliberately generous testing budget.",
+          "text": "Studio album recognized with Best Música Urbana Album at the 2023 GRAMMY Awards.",
           "technologyIds": [
-            "t3",
-            "t4"
+            "t2",
+            "t3"
           ]
+        },
+        {
+          "id": "pa3",
+          "text": "Finished 2022 as Spotify’s most-streamed album globally, connecting a Caribbean-inspired album concept with a worldwide audience.",
+          "technologyIds": []
         }
       ]
     },
     {
       "id": "pr2",
-      "name": "Portable Tunnel Prototype",
-      "url": "https://example.com/portable-tunnel",
+      "name": "YHLQMDLG (2020)",
+      "url": "https://www.grammy.com/news/bad-bunny-wins-best-latin-pop-or-urban-album-yhlqmdlg-2021-grammy-awards-show/",
       "achievements": [
         {
           "id": "pa2",
-          "text": "Painted a convincing tunnel entrance; investigating why only the intended subject can pass through.",
+          "text": "Earned Best Latin Pop or Urban Album at the 2021 GRAMMY Awards, marking his first GRAMMY win.",
           "technologyIds": [
-            "t2"
+            "t1"
           ]
         }
       ]
     }
   ],
   "projectTools": [
-    "t1"
+    "t1",
+    "t2",
+    "t3"
   ],
   "education": [
     {
-      "id": "ed1",
-      "degree": "Independent Studies in Applied Mechanics",
-      "institution": "School of Hard Landings (fictional)",
-      "start": "1946",
-      "end": "1948",
-      "details": "Research focus: gravity, momentum, and unexpectedly short flight times."
+      "id": "ed-demo",
+      "degree": "[Título, carrera o formación cursada]",
+      "institution": "[Nombre de la institución]",
+      "start": "[Año de inicio]",
+      "end": "[Año de finalización o En curso]",
+      "details": "[Añade una especialización, un proyecto académico o un logro relevante. Esta entrada es una guía para completar tu CV; no representa estudios verificados de Bad Bunny.]"
     }
   ],
-  "certifications": [
-    {
-      "id": "c1",
-      "name": "Certified Super Genius (self-awarded)",
-      "issuer": "Wile E. Coyote",
-      "date": "1949",
-      "url": ""
-    }
-  ],
-  "presentations": [
-    {
-      "id": "p1",
-      "title": "Lessons from a Thousand Prototypes",
-      "conference": "Desert Inventors Symposium (fictional)",
-      "date": "2026",
-      "location": "Canyon Rim",
-      "url": ""
-    }
-  ]
+  "certifications": [],
+  "presentations": []
 } satisfies CV;
